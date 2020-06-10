@@ -1,33 +1,48 @@
-if (window.location == 'https://www.privacytools.io/#ukusa') {	window.location = 'https://www.privacytools.io/providers/';}
-if (window.location == 'https://www.privacytools.io/#vpn') {	window.location = 'https://www.privacytools.io/providers/vpn/';}
-if (window.location == 'https://www.privacytools.io/#email') {	window.location = 'https://www.privacytools.io/providers/email/';}
-if (window.location == 'https://www.privacytools.io/#cloud') {	window.location = 'https://www.privacytools.io/providers/cloud-storage/';}
-if (window.location == 'https://www.privacytools.io/#social') {	window.location = 'https://www.privacytools.io/providers/social-networks/';}
-if (window.location == 'https://www.privacytools.io/#dns') {	window.location = 'https://www.privacytools.io/providers/dns/';}
-if (window.location == 'https://www.privacytools.io/#search') {	window.location = 'https://www.privacytools.io/providers/search-engines/';}
-if (window.location == 'https://www.privacytools.io/#host') {	window.location = 'https://www.privacytools.io/providers/hosting/';}
-if (window.location == 'https://www.privacytools.io/#paste') {	window.location = 'https://www.privacytools.io/providers/paste';}
-if (window.location == 'https://www.privacytools.io/#browser') {	window.location = 'https://www.privacytools.io/browsers/';}
-if (window.location == 'https://www.privacytools.io/#fingerprint') {	window.location = 'https://www.privacytools.io/browsers/#fingerprint';}
-if (window.location == 'https://www.privacytools.io/#webrtc') {	window.location = 'https://www.privacytools.io/browsers/#webrtc';}
-if (window.location == 'https://www.privacytools.io/#addons') {	window.location = 'https://www.privacytools.io/browsers/#addons';}
-if (window.location == 'https://www.privacytools.io/#about_config') {	window.location = 'https://www.privacytools.io/browsers/#about_config';}
-if (window.location == 'https://www.privacytools.io/#clients') {	window.location = 'https://www.privacytools.io/software/email/';}
-if (window.location == 'https://www.privacytools.io/#messaging') {	window.location = 'https://www.privacytools.io/software/email/#messaging';}
-if (window.location == 'https://www.privacytools.io/#im') {	window.location = 'https://www.privacytools.io/software/im/';}
-if (window.location == 'https://www.privacytools.io/#voip') {	window.location = 'https://www.privacytools.io/software/voip/';}
-if (window.location == 'https://www.privacytools.io/#filesharing') {	window.location = 'https://www.privacytools.io/software/file-sharing/';}
-if (window.location == 'https://www.privacytools.io/#mycloud') {	window.location = 'https://www.privacytools.io/software/cloud/';}
-if (window.location == 'https://www.privacytools.io/#sync') {	window.location = 'https://www.privacytools.io/software/file-sync/';}
-if (window.location == 'https://www.privacytools.io/#pw') {	window.location = 'https://www.privacytools.io/software/passwords/';}
-if (window.location == 'https://www.privacytools.io/#calendar_contacts') {	window.location = 'https://www.privacytools.io/software/calendar-contacts/';}
-if (window.location == 'https://www.privacytools.io/#encrypt') {	window.location = 'https://www.privacytools.io/software/encryption-tools/';}
-if (window.location == 'https://www.privacytools.io/#darknets') {	window.location = 'https://www.privacytools.io/software/networks/';}
-if (window.location == 'https://www.privacytools.io/#notebook') {	window.location = 'https://www.privacytools.io/software/notebooks/';}
-if (window.location == 'https://www.privacytools.io/#productivity') {	window.location = 'https://www.privacytools.io/software/productivity/';}
-if (window.location == 'https://www.privacytools.io/#os') {	window.location = 'https://www.privacytools.io/operating-systems/';}
-if (window.location == 'https://www.privacytools.io/#live_os') {	window.location = 'https://www.privacytools.io/operating-systems/#live_os';}
-if (window.location == 'https://www.privacytools.io/#mobile_os') {	window.location = 'https://www.privacytools.io/operating-systems/#mobile_os';}
-if (window.location == 'https://www.privacytools.io/#aaddons') {	window.location = 'https://www.privacytools.io/operating-systems/#aaddons';}
-if (window.location == 'https://www.privacytools.io/#firmware') {	window.location = 'https://www.privacytools.io/operating-systems/#firmware';}
-if (window.location == 'https://www.privacytools.io/#win10') {	window.location = 'https://www.privacytools.io/operating-systems/#win10';}
+// Preserves links from old single-page layout.
+// (keyword var is used to support older browsers)
+
+var redirections = {
+    // fromPath: toPath
+    '/#ukusa': '/providers/',
+    '/#vpn': '/providers/vpn/',
+    '/#email': '/providers/email/',
+    '/#cloud': '/providers/cloud-storage/',
+    '/#social': '/providers/social-networks/',
+    '/#dns': '/providers/dns/',
+    '/#search': '/providers/search-engines/',
+    '/#host': '/providers/hosting/',
+    '/#paste': '/providers/paste/',
+    '/#browser': '/browsers/',
+    '/#fingerprint': '/browsers/#fingerprint',
+    '/#webrtc': '/browsers/#webrtc',
+    '/#addons': '/browsers/#addons',
+    '/#about_config': '/browsers/#about_config',
+    '/#clients': '/software/email/',
+    '/#messaging': '/software/email/#messaging',
+    '/#im': '/software/im/',
+    '/#voip': '/software/voip/',
+    '/#filesharing': '/software/file-sharing/',
+    '/#mycloud': '/software/cloud/',
+    '/#sync': '/software/file-sync/',
+    '/#pw': '/software/passwords/',
+    '/#calendar_contacts': '/software/calendar-contacts/',
+    '/#encrypt': '/software/encryption-tools/',
+    '/#darknets': '/software/networks/',
+    '/#notebook': '/software/notebooks/',
+    '/#productivity': '/software/productivity/',
+    '/#os': '/operating-systems/',
+    '/#live_os': '/operating-systems/#live_os',
+    '/#mobile_os': '/operating-systems/#mobile_os',
+    '/#aaddons': '/operating-systems/#aaddons',
+    '/#firmware': '/operating-systems/#firmware',
+    '/#win10': '/operating-systems/#win10'
+};
+
+var currentRelativePath = window.location.pathname + window.location.search + window.location.hash;
+var redirectTo = redirections[currentRelativePath];
+var hasKnownRedirection = typeof redirectTo !== "undefined";
+
+if (hasKnownRedirection) {
+    // redirect with removing source URL from browser history (similar to HTTP 301)
+    window.location.replace(redirectTo);
+}
